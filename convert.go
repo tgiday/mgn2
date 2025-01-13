@@ -10,7 +10,6 @@ import (
 // Prsfloat return the float64 value parsing geez string g.
 func Prsfloat(g string) float64 {
 	if !strings.Contains(g, ".") {
-		//i, _ := strconv.Atoi(str)
 		i := Prsint(g)
 		f := float64(i)
 		return f
@@ -145,7 +144,7 @@ func fmtrune(i int) rune {
 		r := dif + '1' + rune(i) - 1
 		return r
 	}
-	return '፨'
+	return '፨' //no zero in geez notation
 }
 
 // Fmtfloat return string representation of float64 n
